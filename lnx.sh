@@ -3,7 +3,7 @@ printf "Installing RDP ... This may take a while be Patience ..." >&2
 {
 sudo useradd -m hideyoshi
 sudo adduser hideyoshi sudo
-echo 'OPTIMOS:010203' | sudo chpasswd
+echo 'hideyoshi:010203' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
