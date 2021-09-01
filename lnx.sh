@@ -1,9 +1,9 @@
 #! /bin/bash
 printf "Installing RDP ... This may take a while be Patience ..." >&2
 {
-sudo useradd -m OPTIMOS
-sudo adduser OPTIMOS sudo
-echo 'OPTIMOS:235711' | sudo chpasswd
+sudo useradd -m hideyoshi
+sudo adduser hideyoshi sudo
+echo 'OPTIMOS:010203' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
@@ -18,7 +18,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano -y 
-sudo adduser OPTIMOS chrome-remote-desktop
+sudo adduser hideyoshi chrome-remote-desktop
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
 printf "\nError Occured " >&2
